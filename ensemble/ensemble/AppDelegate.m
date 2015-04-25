@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "ENHelpers.h"
 
 @interface AppDelegate ()
 
@@ -18,11 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     RootViewController *rootViewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    [ENHelpers setNavigationControllerENSkinAndAction:navigationController];
     self.window.rootViewController = navigationController;
-    [self.window setFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     return YES;
 }
