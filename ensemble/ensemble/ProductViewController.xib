@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController">
+            <connections>
+                <outlet property="addButtonBottomConstraint" destination="cL3-BQ-iqp" id="Feg-l5-YvV"/>
+                <outlet property="addbutton" destination="Rqa-lQ-GSa" id="uAf-3b-LAT"/>
+                <outlet property="tableView" destination="HgX-Eh-PTQ" id="sHa-K5-1EY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HgX-Eh-PTQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yKX-by-Qc8"/>
+                        <outlet property="delegate" destination="-1" id="pzt-4q-a0f"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqa-lQ-GSa">
+                    <rect key="frame" x="282" y="520" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.87058823529999996" green="0.37254901959999998" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="CUR-Dj-tXG"/>
+                        <constraint firstAttribute="height" constant="30" id="yEI-R8-iCf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Rqa-lQ-GSa" secondAttribute="centerX" constant="-137" id="8sH-9G-h1t"/>
+                <constraint firstAttribute="trailing" secondItem="HgX-Eh-PTQ" secondAttribute="trailing" id="BVe-A4-aLc"/>
+                <constraint firstItem="HgX-Eh-PTQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GzT-Yp-0rU"/>
+                <constraint firstItem="HgX-Eh-PTQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YAQ-zd-mYF"/>
+                <constraint firstAttribute="bottom" secondItem="Rqa-lQ-GSa" secondAttribute="bottom" constant="18" id="cL3-BQ-iqp"/>
+                <constraint firstAttribute="bottom" secondItem="HgX-Eh-PTQ" secondAttribute="bottom" id="tD9-fp-h6x"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="252" y="390"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
